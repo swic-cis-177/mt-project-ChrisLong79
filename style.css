@@ -1,0 +1,29 @@
+body {
+  background-color: gold;
+  border-style: groove groove groove groove;
+  color: black;
+  display: block;
+  font-family: "Times New Roman", Times, serif;
+  list-style-type: none;
+}
+h1 {
+  color: red;
+  font-family: Impact, Charcoal, sans-serif;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+button {
+  background-color: white;
+  border-radius: 4px;
+  color: red;
+}
+button:hover {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
