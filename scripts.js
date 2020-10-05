@@ -1,3 +1,5 @@
-// TODO Create click event
+const button = document.querySelector("button");
 
-// TODO When clicked have it return a box saying "name" has "#" beef and "#" hogs scheduled for "date"
+//Add event listen
+// TODO Create click event
+//DO When clicked have it return a box saying "name" has "#" beef and "#" hogs scheduled for "date"
