@@ -1,5 +1,5 @@
-const button = document.querySelector("button");
+const form = document.querySelector("form");
 
-//Add event listen
-// TODO Create click event
+form.addEventListener("click", function () {});
+
 //DO When clicked have it return a box saying "name" has "#" beef and "#" hogs scheduled for "date"
