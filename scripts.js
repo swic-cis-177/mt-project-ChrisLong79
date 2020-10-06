@@ -5,7 +5,8 @@ form.addEventListener("submit", () => {
 
   const data = {};
   for (let i = 0; i <= 4; i++) {
-    console.log(event.target.elements[i].value);
+    data[event.target.elements[i].id] = event.target.elements[i].value;
+    console.log(data);
   }
 });
 
