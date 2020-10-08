@@ -21,9 +21,11 @@ button {
   background-color: white;
   border-radius: 4px;
   color: red;
+  cursor: pointer;
+  padding: 0.5rem;
 }
 button:hover {
-  background-color: black;
+  background-color: red;
   color: white;
   text-align: center;
 }
