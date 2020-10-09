@@ -10,5 +10,7 @@ form.addEventListener("submit", () => {
   for (let i = 0; i <= 4; i++) {
     formData[event.target.elements[i].id] = event.target.elements[i].value;
   }
+  //Log the formData to console (the id and value form the inputs)
+
   console.log(formData);
 });
