@@ -1,98 +1,104 @@
 <!DOCTYPE html>
-<html>
- <body> 
-  <title>Lehr's Market</title>
-  <h1>Lehr's Market</h1>
-    <h2>
-      Smokies Order Form
-    </h2>
-  
-   <form> <form action="/form-processing-script" method "post" id="form">
-       <p>
-     <p>Smokies $10.00 per pack</p>
-     
-     <p>
-       <label for="regsmokies">Regular</label>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <p>Smokies $10.00 per pack</p>
 
-<select name="regsmokies" id="regsmokies">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-       </select></p>
-         <p>
-       <label for="jpjsmokies">Jalapeno and Pepper Jack Cheese</label>
+      <div>
+        <label for="regsmokies">Regular</label>
 
-<select name="jpjsmokies" id="jpjsmokies">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-       </select></p>
-         <p>
-       <label for="tersmokies">Teriyaki</label>
+        <select name="regsmokies" id="regsmokies">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
 
-<select name="tersmokies" id="tersmokies">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-       </select></p>
-     
-         <p>
-       <label for="Hab">Habenero</label>
+      <p>
+        <label for="jpjsmokies">Jalapeno and Pepper Jack Cheese</label>
 
-<select name="hab" id="hab">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-       </select></p>
-         <p>
-       <label for="Habcheese">Habanero and Cheese</label>
+        <select name="jpjsmokies" id="jpjsmokies">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </p>
 
-<select name="habcheese" id="habcheese">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-       </select></p>
-         <p>
-       <label for="car">Carolina Reaper</label>
+      <p>
+        <label for="tersmokies">Teriyaki</label>
 
-<select name="car" id="car">
-  <option value="0">0</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-       </select></p>
-     
-  <p class="button"><br>
-    <button type="Submit">Submit</button></p>
-     </form>
-     <table id="student-table">
-        <thead>
-          <tr>
-            <td>Flavor</td>
-            <td>Quantity</td>
-            <td>Total</td>
-          </tr>
-        </thead>
-        <tbody>
-     
-     
-     
-     <template id="ordered-row">
+        <select name="tersmokies" id="tersmokies">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="Hab">Habenero</label>
+
+        <select name="hab" id="hab">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="Habcheese">Habanero and Cheese</label>
+
+        <select name="habcheese" id="habcheese">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="car">Carolina Reaper</label>
+
+        <select name="car" id="car">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </p>
+
+      <button type="Submit">Submit</button>
+    </form>
+
+    <table id="student-table">
+      <thead>
+        <tr>
+          <td>Flavor</td>
+          <td>Quantity</td>
+          <td>Total</td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <footer>
+      <a href="https://lehrsmeatmarket.com/">Lehr's Market Home Page</a>
+    </footer>
+
+    <template id="ordered-row">
       <tr>
         <td></td>
         <td></td>
         <td></td>
       </tr>
     </template>
-     </table>
-    <p>
-      <a
-                               href="https://lehrsmeatmarket.com/">Lehr's Market Home Page</a>
-      </p></body></html>
-   
-     
+  </body>
+</html>
