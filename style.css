@@ -1,14 +1,8 @@
 body {
-  background-color: gold;
-  border-style: groove groove groove groove;
-  color: black;
-  display: block;
-  font-family: "Times New Roman", Times, serif;
-  list-style-type: none;
+  background-color: rgb(187, 180, 151);
 }
+
 h1 {
-  color: red;
-  font-family: Impact, Charcoal, sans-serif;
   text-align: center;
 }
 h2 {
@@ -20,12 +14,15 @@ p {
 button {
   background-color: white;
   border-radius: 4px;
-  color: red;
-  cursor: pointer;
-  padding: 0.5rem;
+  color: #880909;
 }
 button:hover {
-  background-color: red;
+  background-color: black;
   color: white;
   text-align: center;
+}
+table {
+  border-collapse: collapse;
+  margin-bottom: 0.5rem;
+  width: 100%;
 }
