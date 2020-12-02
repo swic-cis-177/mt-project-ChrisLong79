@@ -3,9 +3,11 @@ body {
 }
 
 h1 {
+  color: red;
   text-align: center;
 }
 h2 {
+  color: navy;
   text-align: center;
 }
 p {
@@ -15,6 +17,7 @@ button {
   background-color: white;
   border-radius: 4px;
   color: #880909;
+  text-align: center;
 }
 button:hover {
   background-color: black;
@@ -25,4 +28,18 @@ table {
   border-collapse: collapse;
   margin-bottom: 0.5rem;
   width: 100%;
+}
+td {
+  background-color: red;
+  color: white;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  text-align: left;
+}
+footer {
+  text-align: center;
+}
+label {
+  display: inline-block;
+  width: 240px;
 }
