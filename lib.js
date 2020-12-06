@@ -24,7 +24,7 @@ export const createShoppingCart = (shoppingCart) => {
   });
 };
 
-const processForm = (elements) =>
+export const processForm = (elements) =>
   Array.from(elements)
     .filter(({ id }) => id)
     .reduce(
