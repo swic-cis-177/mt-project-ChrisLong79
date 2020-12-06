@@ -1,14 +1,17 @@
 const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
+const form = document.querySelector("form");
+const div = document.querySelector("div");
 
-export const createShoppingCart = (data) => {
-  data.forEach(({ flavor, quantity, total }) => {
-    const newFlavorRow = template.content.cloneNode(true);
-    const newOrderTDs = newFlavorRow.querySelectorAll("td");
+export const createShoppingCart = (salesData) => {
+  tbody.innerHTML = null;
 
-    newOrderTDs[0].textContent = flavor;
-    newOrderTDs[1].textContent = quantity;
-    newOrderTDs[2].textContent = total;
-    tbody.appendChild(newFlavorRow);
+  salesData.forEach(({ flavor, quantity, total }) => {
+    const newSalesRow = template.content.cloneNode(true);
+    const newSalesTDs = newSalesRow.querySelectorAll("td");
+    newSalesTDs[0].innerText = flavor;
+    newSalesTDs[1].innerText = quantity;
+    newSalesTDs[2].innerText = total;
+    tbody.appendChild(newSalesRow);
   });
 };
