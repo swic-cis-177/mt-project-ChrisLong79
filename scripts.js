@@ -1,4 +1,4 @@
-import { processForm } from "./lib.js";
+import { createShoppingCart } from "./lib.js";
 
 const form = document.querySelector("form");
 
@@ -7,5 +7,5 @@ form.addEventListener("submit", () => {
   //Block default handling of the submit action
   event.preventDefault();
 
-  console.log(processForm(event.target.elements));
+  console.log(createShoppingCart(event.target.elements));
 });

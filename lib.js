@@ -3,28 +3,25 @@ const template = document.querySelector("template");
 const form = document.querySelector("form");
 const div = document.querySelector("div");
 
-// TODO: create const to have unit price =10.00 for each id
-const unitPrice = 10.0;
+const calcTotal = (order) => {
+  const unitPrice = 10.0;
 
-// TODO: create const Total to multiply unit price by qty in input box.
-// TODO: create const that adds all Totals up and have it displayed in H3  "total $" grand total.
-// flavor = id ,quantity= id.value, unit price=const unitPrice , total=const total
+  // Get all of the values only from the order
+  const quantities = Object.values(order);
 
-// fix code in createShoppingCart
-export const createShoppingCart = (shoppingCart) => {
-  tbody.innerHTML = null;
+  //  Total up all of the quantities that are in that Array of quantities
+  const totalQuantity = quantities.reduce((total, quantity) => {
+    // Keep adding the quantities as numbers
+    total += Number(quantity);
+    return total;
+  }, 0);
 
-  shoppingCart.forEach(({ flavor, quantity, total }) => {
-    const newSalesRow = template.content.cloneNode(true);
-    const newSalesTDs = newSalesRow.querySelectorAll("td");
-    newSalesTDs[0].innerText = "id";
-    newSalesTDs[1].innerText = quantity;
-    newSalesTDs[2].innerText = total;
-    tbody.appendChild(newSalesRow);
-  });
+  const totalPrice = totalQuantity * unitPrice;
+
+  return [totalQuantity, totalPrice];
 };
 
-export const processForm = (elements) =>
+const processForm = (elements) =>
   Array.from(elements)
     .filter(({ id }) => id)
     .reduce(
@@ -34,6 +31,27 @@ export const processForm = (elements) =>
       }),
       {}
     );
+
+// fix code in createShoppingCart
+export const createShoppingCart = (formValues) => {
+  const newOrder = processForm(formValues);
+
+  const [quantity, price] = calcTotal(newOrder);
+  console.log(quantity, price);
+  // TODO: Use the templates to show the quantity and price
+  // TODO: Generate an id
+  // // Reset the table body b4 adding more stutff
+  // tbody.innerHTML = null;
+
+  // shoppingCart.forEach(({ flavor, quantity, total }) => {
+  //   const newSalesRow = template.content.cloneNode(true);
+  //   const newSalesTDs = newSalesRow.querySelectorAll("td");
+  //   newSalesTDs[0].innerText = "id";
+  //   newSalesTDs[1].innerText = quantity;
+  //   newSalesTDs[2].innerText = total;
+  //   tbody.appendChild(newSalesRow);
+  // });
+};
 
 //what i want form to do.
 // allow user to select quantity of smokies by flavor +
