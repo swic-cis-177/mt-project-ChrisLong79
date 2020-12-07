@@ -7,7 +7,7 @@ const div = document.querySelector("div");
 const unitPrice = 10.0;
 
 // TODO: create const Total to multiply unit price by qty in input box.
-// TODO: create const that adds all Totals up and have it displayed in H3  "total $" grand total.
+// TODO: create const grandTotal that adds all Totals up and have it displayed in H3  "total $" grandTotal.
 // flavor = id ,quantity= id.value, unit price=const unitPrice , total=const total
 
 // fix code in createShoppingCart
