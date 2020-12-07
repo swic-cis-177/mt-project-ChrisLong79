@@ -7,12 +7,12 @@ form.addEventListener("submit", () => {
   event.preventDefault();
 
   const newOrder = calcShoppingCart(event.target.elements);
-
+  console.log(newOrder);
   // TODO: Send totalQty, totalPrice to update the table
 });
 
 //const render = (newOrder) => {
-//renderTable(newOrder);
+//calcShoppingCart(newOrder);
 //};
 
 //render();
