@@ -1,22 +1,18 @@
-import { createShoppingCart } from "./lib.js";
+import { calcShoppingCart } from "./lib.js";
+
+const orders = [];
 
 const form = document.querySelector("form");
 form.addEventListener("submit", () => {
-  //Block default handling of the submit action
   event.preventDefault();
-  //Declare a variable for the form data
-  const formData = {};
-  //Create loop to display data from form
-  for (let i = 0; i <= 6; i++) {
-    formData[event.target.elements[i].id] = event.target.elements[i].value;
-  }
-  //Log the formData to console (the id and value form the inputs)
 
-  console.log(formData);
+  const newOrder = calcShoppingCart(event.target.elements);
+
+  // TODO: Send totalQty, totalPrice to update the table
 });
 
-const render = (shoppingCart) => {
-  createShoppingCart(shoppingCart);
-};
+//const render = (newOrder) => {
+//renderTable(newOrder);
+//};
 
-render();
+//render();

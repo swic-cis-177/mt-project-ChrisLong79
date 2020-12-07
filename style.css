@@ -15,8 +15,9 @@ p {
 }
 button {
   background-color: white;
-  border-radius: 4px;
-  color: #880909;
+  border-radius: 8px;
+  color: hsl(0, 88%, 28%);
+  font-size: 20px;
   text-align: center;
 }
 button:hover {

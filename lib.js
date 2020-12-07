@@ -3,25 +3,22 @@ const template = document.querySelector("template");
 const form = document.querySelector("form");
 const div = document.querySelector("div");
 
-// TODO: create const to have unit price =10.00 for each id
-const unitPrice = 10.0;
+const calcTotals = (order) => {
+  const unitPrice = 10.0;
 
-// TODO: create const Total to multiply unit price by qty in input box.
-// TODO: create const grandTotal that adds all Totals up and have it displayed in H3  "total $" grandTotal.
-// flavor = id ,quantity= id.value, unit price=const unitPrice , total=const total
+  // Get all of the values only from the order
+  const quantities = Object.values(order);
 
-// fix code in createShoppingCart
-export const createShoppingCart = (shoppingCart) => {
-  tbody.innerHTML = null;
+  //  Total up all of the quantities that are in that Array of quantities
+  const totalQuantity = quantities.reduce((total, quantity) => {
+    // Keep adding the quantities as numbers
+    total += Number(quantity);
+    return total;
+  }, 0);
 
-  shoppingCart.forEach(({ flavor, quantity, total }) => {
-    const newSalesRow = template.content.cloneNode(true);
-    const newSalesTDs = newSalesRow.querySelectorAll("td");
-    newSalesTDs[0].innerText = "id";
-    newSalesTDs[1].innerText = quantity;
-    newSalesTDs[2].innerText = total;
-    tbody.appendChild(newSalesRow);
-  });
+  const totalPrice = totalQuantity * unitPrice;
+
+  return { totalPrice, totalQuantity };
 };
 
 const processForm = (elements) =>
@@ -34,6 +31,33 @@ const processForm = (elements) =>
       }),
       {}
     );
+
+// fix code in createShoppingCart
+export const calcShoppingCart = (formValues) => {
+  const newOrder = processForm(formValues);
+
+  // TODO: Generate an id and include it with the order
+
+  return calcTotals(newOrder);
+
+  // TODO: Use the templates to show the quantity and price
+  // TODO: Generate an id
+  // // Reset the table body b4 adding more stutff
+  // tbody.innerHTML = null;
+
+  // shoppingCart.forEach(({ flavor, quantity, total }) => {
+  //   const newSalesRow = template.content.cloneNode(true);
+  //   const newSalesTDs = newSalesRow.querySelectorAll("td");
+  //   newSalesTDs[0].innerText = "id";
+  //   newSalesTDs[1].innerText = quantity;
+  //   newSalesTDs[2].innerText = total;
+  //   tbody.appendChild(newSalesRow);
+  // });
+};
+
+export const renderTable = (orders) => {
+  // TODO: Use the template to show each order in a new row
+};
 
 //what i want form to do.
 // allow user to select quantity of smokies by flavor +

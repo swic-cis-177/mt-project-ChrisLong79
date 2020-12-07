@@ -43,4 +43,7 @@
   "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
   "typescript.format.insertSpaceAfterSemicolonInForStatements": false,
   "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+  "cSpell.words": [
+    "habcheese"
+  ],
 }
