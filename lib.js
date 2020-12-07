@@ -3,7 +3,7 @@ const template = document.querySelector("template");
 const form = document.querySelector("form");
 const div = document.querySelector("div");
 
-const calcTotal = (order) => {
+const calcTotals = (order) => {
   const unitPrice = 10.0;
 
   // Get all of the values only from the order
@@ -18,7 +18,7 @@ const calcTotal = (order) => {
 
   const totalPrice = totalQuantity * unitPrice;
 
-  return [totalQuantity, totalPrice];
+  return { totalPrice, totalQuantity };
 };
 
 const processForm = (elements) =>
@@ -33,11 +33,13 @@ const processForm = (elements) =>
     );
 
 // fix code in createShoppingCart
-export const createShoppingCart = (formValues) => {
+export const calcShoppingCart = (formValues) => {
   const newOrder = processForm(formValues);
 
-  const [quantity, price] = calcTotal(newOrder);
-  console.log(quantity, price);
+  // TODO: Generate an id and include it with the order
+
+  return calcTotals(newOrder);
+
   // TODO: Use the templates to show the quantity and price
   // TODO: Generate an id
   // // Reset the table body b4 adding more stutff
@@ -51,6 +53,10 @@ export const createShoppingCart = (formValues) => {
   //   newSalesTDs[2].innerText = total;
   //   tbody.appendChild(newSalesRow);
   // });
+};
+
+export const renderTable = (orders) => {
+  // TODO: Use the template to show each order in a new row
 };
 
 //what i want form to do.
