@@ -5,69 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Smokies Order Form</title>
   </head>
   <body>
     <form id="form">
       <h1>Lehr's Meat Market</h1>
-      <h2>Smokies $10.00 per pack</h2>
+      <h2  class "price" data-price="10.00">Smokies $10.00 per pack</h2>
 
       <p>
         <label for="regular">Regular</label>
-        <input type="number" id="regular" name="regular">
+        <input type="number" id="Regular" name="regular" value="0">
 
-        </select>
+
       </p>
 
       <p>
-        <label for="jpjsmokies">Jalapeno and Pepper Jack Cheese</label>
+        <label for="Jalapeno and Pepper Jack">Jalapeno and Pepper Jack Cheese</label>
 
-        <input type="number" id="jpjsmokies" name="jpjsmokies">
+        <input type="number" id="Jalapeno and Pepper Jack" name:="jpjsmokies" value="0">
       </p>
 
       <p>
-        <label for="tersmokies">Teriyaki</label>
+        <label for="Teriyaki">Teriyaki</label>
 
-          <input type="number" id="tersmokies" name="tersmokies">
+          <input type="number" id="Teriyaki" name="tersmokies" value="0">
       </p>
 
       <p>
         <label for="Hab">Habenero</label>
-        <input type="number" id="habenero" name="habenero">
+        <input type="number" id="Habenero" name="habenero" value="0">
 
       </p>
 
       <p>
         <label for="Habcheese">Habanero and Cheese</label>
 
-        <input type="number" id="habcheese" name="habcheese">
+        <input type="number" id="Habenero and Cheese" name="habcheese" value="0">
       </p>
 
       <p>
         <label for="car">Carolina Reaper</label>
-
-        <select name="car" id="car">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
+        <input type="number" id="Carolina Reaper" name="car" value="0">
       </p>
 <p>
-      <button type="Submit">Submit</button>
- </p>   </form>
+      <button type="submit">Add To Cart</button>
+ </p>   </form><br><br>
+<h2>Shopping Cart</h2>
 
-    <table id="student-table">
+    <table id="shopping-table">
       <thead>
         <tr>
           <td>Flavor</td>
           <td>Quantity</td>
+          <td>Unit Price</td>
           <td>Total</td>
         </tr>
       </thead>
       <tbody></tbody>
     </table>
-
+<h3>Total of Shopping Cart</h3>
     <footer>
       <a href="https://lehrsmeatmarket.com/">Lehr's Market Home Page</a>
     </footer>
@@ -79,7 +75,7 @@
         <td></td>
       </tr>
     </template>
-
+<div></div>
     <script src="scripts.js" type="module"></script>
   </body>
 </html>
