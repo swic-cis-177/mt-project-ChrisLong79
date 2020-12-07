@@ -43,19 +43,21 @@ export const calcShoppingCart = (formValues) => {
   // TODO: Use the templates to show the quantity and price
   // TODO: Generate an id
   // // Reset the table body b4 adding more stutff
-  // tbody.innerHTML = null;
+  //export const displayData = (orderDetails) => {
 
-  // shoppingCart.forEach(({ flavor, quantity, total }) => {
-  //   const newSalesRow = template.content.cloneNode(true);
-  //   const newSalesTDs = newSalesRow.querySelectorAll("td");
-  //   newSalesTDs[0].innerText = "id";
-  //   newSalesTDs[1].innerText = quantity;
-  //   newSalesTDs[2].innerText = total;
-  //   tbody.appendChild(newSalesRow);
-  // });
-};
+  //tbody.innerHTML = null;
 
-export const renderTable = (orders) => {
+  //displayData.forEach(({ flavor, quantity, total }) => {
+  //const newSalesRow = template.content.cloneNode(true);
+  //const newSalesTDs = newSalesRow.querySelectorAll("td");
+  //newSalesTDs[0].innerText = "id";
+  //newSalesTDs[1].innerText = totalQuantity;
+  // newSalesTDs[2].innerText = totalPrice;
+  //tbody.appendChild(newSalesRow);
+  //});
+  //};
+
+  //export const renderTable = (orders) => {
   // TODO: Use the template to show each order in a new row
 };
 
